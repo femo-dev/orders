@@ -1,0 +1,11 @@
+﻿namespace Application.Common
+{
+
+    /// <summary>
+    /// Excepción lanzada cuando hay errores de validación.
+    /// </summary>
+    public class ValidationException : ApplicationException
+    {
+        public ValidationException(string message) : base(message) { }
+    }
+}
