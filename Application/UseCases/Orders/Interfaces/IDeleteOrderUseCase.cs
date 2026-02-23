@@ -1,4 +1,4 @@
-﻿namespace Application.UseCases.Orders.Interfaces
+﻿namespace Orders.Application.UseCases.Orders.Interfaces
 {
     /// <summary>
     /// Interfaz que define el contrato para el caso de uso de eliminación de órdenes.

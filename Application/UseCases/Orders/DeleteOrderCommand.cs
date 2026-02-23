@@ -1,4 +1,4 @@
-﻿namespace Application.UseCases.Orders
+﻿namespace Orders.Application.UseCases.Orders
 {
 
     /// <summary>

@@ -1,11 +1,11 @@
-﻿using Application.Common;
-using Application.DTOs;
-using Application.UseCases.Orders.Interfaces;
-using Domain.Entities;
-using Domain.Exceptions;
-using Domain.Interfaces;
+﻿using Orders.Application.Common;
+using Orders.Application.DTOs;
+using Orders.Application.UseCases.Orders.Interfaces;
+using Orders.Domain.Entities;
+using Orders.Domain.Exceptions;
+using Orders.Domain.Interfaces;
 
-namespace Application.UseCases.Orders
+namespace Orders.Application.UseCases.Orders
 {
     /// <summary>
     /// Manejador del caso de uso de creación de orden.

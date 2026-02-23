@@ -1,9 +1,9 @@
-﻿using Application.Common;
-using Application.DTOs;
-using Application.UseCases.Products.Interfaces;
-using Domain.Interfaces;
+﻿using Orders.Application.Common;
+using Orders.Application.DTOs;
+using Orders.Application.UseCases.Products.Interfaces;
+using Orders.Domain.Interfaces;
 
-namespace Application.UseCases.Products
+namespace Orders.Application.UseCases.Products
 {
     /// <summary>
     /// Manejador del caso de uso de obtener un producto por ID.

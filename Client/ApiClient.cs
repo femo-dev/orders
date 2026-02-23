@@ -1,5 +1,5 @@
 ﻿using System.Net.Http.Json;
-using Client.Models;
+using Orders.Client.Models;
 
 namespace Client
 {

@@ -1,4 +1,4 @@
-﻿namespace Application.DTOs
+﻿namespace Orders.Application.DTOs
 {
     /// <summary>
     /// DTO para la respuesta paginada de productos.

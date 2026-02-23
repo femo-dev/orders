@@ -1,6 +1,6 @@
-﻿using Application.Common;
+﻿using Orders.Application.Common;
 
-namespace Api.Middleware
+namespace Orders.Api.Middleware
 {
     /// <summary>
     /// Middleware global para capturar y manejar excepciones.

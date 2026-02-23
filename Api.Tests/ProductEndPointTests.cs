@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using FluentAssertions;
 
-namespace Api.Tests
+namespace Orders.Api.Tests
 {
     public class ProductEndpointsTests
     : IClassFixture<CustomWebApplicationFactory>

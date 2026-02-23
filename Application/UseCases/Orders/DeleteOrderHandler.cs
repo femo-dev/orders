@@ -1,8 +1,8 @@
-﻿using Application.Common;
-using Application.UseCases.Orders.Interfaces;
-using Domain.Interfaces;
+﻿using Orders.Application.Common;
+using Orders.Application.UseCases.Orders.Interfaces;
+using Orders.Domain.Interfaces;
 
-namespace Application.UseCases.Orders
+namespace Orders.Application.UseCases.Orders
 {
     /// <summary>
     /// Manejador del caso de uso de eliminar una orden.

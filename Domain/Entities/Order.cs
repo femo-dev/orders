@@ -1,6 +1,6 @@
-﻿using Domain.Exceptions;
+﻿using Orders.Domain.Exceptions;
 
-namespace Domain.Entities
+namespace Orders.Domain.Entities
 {
     /// <summary>
     /// Entidad Orden del dominio.

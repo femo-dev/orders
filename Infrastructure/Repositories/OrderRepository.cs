@@ -1,8 +1,8 @@
-﻿namespace Infrastructure.Repositories
+﻿namespace Orders.Infrastructure.Repositories
 {
-    using Domain.Entities;
-    using Domain.Interfaces;
-    using Infrastructure.Persistence;
+    using Orders.Domain.Entities;
+    using Orders.Domain.Interfaces;
+    using Orders.Infrastructure.Persistence;
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>

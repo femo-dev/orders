@@ -1,4 +1,4 @@
-﻿namespace Application.Exceptions
+﻿namespace Orders.Application.Exceptions
 {
     public class ProductDomainException : Exception
     {

@@ -1,9 +1,9 @@
-﻿using Domain.Entities;
-using Domain.ValueObjects;
+﻿using Orders.Domain.Entities;
+using Orders.Domain.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Infrastructure.Configurations
+namespace Orders.Infrastructure.Configurations
 {
     /// <summary>
     /// Configuración de la entidad Product en Entity Framework Core.

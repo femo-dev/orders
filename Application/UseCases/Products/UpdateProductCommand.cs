@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.UseCases.Products
+namespace Orders.Application.UseCases.Products
 {
     /// <summary>
     /// Comando para actualizar un producto.

@@ -1,4 +1,4 @@
-﻿namespace Application.UseCases.Products
+﻿namespace Orders.Application.UseCases.Products
 {
     /// <summary>
     /// Comando para obtener productos con paginación y filtrado.

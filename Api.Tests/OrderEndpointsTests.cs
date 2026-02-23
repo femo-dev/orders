@@ -2,7 +2,7 @@
 using System.Net.Http.Json;
 using FluentAssertions;
 
-namespace Api.Tests
+namespace Orders.Api.Tests
 {
     public class OrderEndpointsTests
         : IClassFixture<CustomWebApplicationFactory>

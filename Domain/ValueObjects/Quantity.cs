@@ -1,4 +1,4 @@
-﻿namespace Domain.ValueObjects
+﻿namespace Orders.Domain.ValueObjects
 {
     /// <summary>
     /// Value Object que representa una cantidad.

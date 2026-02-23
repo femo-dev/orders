@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.ValueObjects
+namespace Orders.Domain.ValueObjects
 {
     /// <summary>
     /// Value Object que representa un monto de dinero.

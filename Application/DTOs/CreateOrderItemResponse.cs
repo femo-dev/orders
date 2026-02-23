@@ -1,4 +1,4 @@
-﻿namespace Application.DTOs
+﻿namespace Orders.Application.DTOs
 {
     /// <summary>
     /// DTO para un item de orden en la respuesta.

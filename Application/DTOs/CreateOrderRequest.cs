@@ -1,4 +1,4 @@
-﻿namespace Application.DTOs
+﻿namespace Orders.Application.DTOs
 {
     /// <summary>
     /// DTO para la solicitud de creación de orden.

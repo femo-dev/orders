@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Client.Models
+namespace Orders.Client.Models
 {
     /// <summary>
     /// Modelo de orden para desérialización desde la API.

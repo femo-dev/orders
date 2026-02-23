@@ -1,7 +1,7 @@
-﻿using Application.UseCases.Orders;
-using Application.UseCases.Products;
+﻿using Orders.Application.UseCases.Orders;
+using Orders.Application.UseCases.Products;
 
-namespace Api.Extensions
+namespace Orders.Api.Extensions
 {
     /// <summary>
     /// Extensión para registrar servicios de la capa Application.

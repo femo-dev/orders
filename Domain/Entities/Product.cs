@@ -1,7 +1,7 @@
-﻿using Domain.Exceptions;
-using Domain.ValueObjects;
+﻿using Orders.Domain.Exceptions;
+using Orders.Domain.ValueObjects;
 
-namespace Domain.Entities
+namespace Orders.Domain.Entities
 {
     /// <summary>
     /// Entidad Producto del dominio.

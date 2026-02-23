@@ -1,4 +1,4 @@
-﻿namespace Application.UseCases.Products.Interfaces
+﻿namespace Orders.Application.UseCases.Products.Interfaces
 {
     /// <summary>
     /// Interfaz que define el contrato del caso de uso de eliminación de productos.

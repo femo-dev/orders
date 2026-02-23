@@ -1,8 +1,8 @@
-﻿namespace SistemaProductosOrdenes.WebApi.Controllers;
+﻿namespace Orders.Api.Controllers;
 
-using Application.DTOs;
-using Application.UseCases.Orders;
-using Application.UseCases.Orders.Interfaces;
+using Orders.Application.DTOs;
+using Orders.Application.UseCases.Orders;
+using Orders.Application.UseCases.Orders.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 /// <summary>

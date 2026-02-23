@@ -1,6 +1,6 @@
-﻿using Domain.Interfaces;
-using Infrastructure.Persistence;
-using Infrastructure.Repositories;
+﻿using Orders.Domain.Interfaces;
+using Orders.Infrastructure.Persistence;
+using Orders.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,7 +20,7 @@ namespace Infrastructure
         {
             // Registrar DbContext
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("SistemaProductosOrdenesDb"));
+                options.UseInMemoryDatabase("Orders"));
 
             // Registrar Repositorios
             services.AddScoped<IProductRepository, ProductRepository>();

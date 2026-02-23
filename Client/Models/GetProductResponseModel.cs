@@ -1,4 +1,4 @@
-﻿namespace Client.Models
+﻿namespace Orders.Client.Models
 {
     using System.Text.Json.Serialization;
 

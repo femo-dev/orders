@@ -1,6 +1,6 @@
-﻿using Domain.Entities;
+﻿using Orders.Domain.Entities;
 
-namespace Domain.Interfaces
+namespace Orders.Domain.Interfaces
 {
 
     /// <summary>

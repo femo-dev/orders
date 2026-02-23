@@ -1,6 +1,6 @@
-﻿namespace Infrastructure.Persistence
+﻿namespace Orders.Infrastructure.Persistence
 {
-    using Domain.Entities;
+    using Orders.Domain.Entities;
 
     /// <summary>
     /// Clase auxiliar para poblar la base de datos con datos iniciales.

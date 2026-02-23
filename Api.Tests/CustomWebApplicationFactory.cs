@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
-using Infrastructure.Persistence;
+using Orders.Infrastructure.Persistence;
 
-namespace Api.Tests
+namespace Orders.Api.Tests
 {
     public class CustomWebApplicationFactory
     : WebApplicationFactory<Program>

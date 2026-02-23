@@ -1,4 +1,4 @@
-﻿namespace Domain.Exceptions
+﻿namespace Orders.Domain.Exceptions
 {
     public class OrderDomainException : Exception
     {

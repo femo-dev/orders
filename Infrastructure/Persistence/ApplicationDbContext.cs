@@ -1,7 +1,7 @@
-﻿using Domain.Entities;
+﻿using Orders.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Persistence
+namespace Orders.Infrastructure.Persistence
 {
     /// <summary>
     /// DbContext principal de la aplicación.

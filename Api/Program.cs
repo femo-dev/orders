@@ -1,6 +1,6 @@
-using Api.Extensions;
-using Api.Middleware;
-using Infrastructure.Persistence;
+using Orders.Api.Extensions;
+using Orders.Api.Middleware;
+using Orders.Infrastructure.Persistence;
 using Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);

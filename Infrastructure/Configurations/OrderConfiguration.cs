@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Domain.Entities;
+using Orders.Domain.Entities;
 
-namespace Infrastructure.Configurations
+namespace Orders.Infrastructure.Configurations
 {
     /// <summary>  
     /// Configuración de la entidad Order en Entity Framework Core.  

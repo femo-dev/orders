@@ -1,4 +1,4 @@
-﻿namespace Application.Common
+﻿namespace Orders.Application.Common
 {
 
     /// <summary>
