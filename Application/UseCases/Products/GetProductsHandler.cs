@@ -1,5 +1,6 @@
 ﻿using Application.Common;
 using Application.DTOs;
+using Application.UseCases.Products.Interfaces;
 using Domain.Exceptions;
 using Domain.Interfaces;
 
@@ -9,7 +10,7 @@ namespace Application.UseCases.Products
     /// <summary>
     /// Manejador del caso de uso de actualización de producto.
     /// </summary>
-    public class GetProductsHandler
+    public class GetProductsHandler: IGetProductsUseCase
     {
         private readonly IProductRepository _productRepository;
 

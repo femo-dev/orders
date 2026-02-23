@@ -1,10 +1,9 @@
 ﻿using Application.Common;
+using Application.UseCases.Orders.Interfaces;
 using Domain.Interfaces;
 
 namespace Application.UseCases.Orders
 {
-
-
     /// <summary>
     /// Manejador del caso de uso de eliminar una orden.
     /// 
@@ -13,7 +12,7 @@ namespace Application.UseCases.Orders
     /// 2. Restaurar el stock de todos los productos
     /// 3. Eliminar la orden
     /// </summary>
-    public class DeleteOrderHandler
+    public class DeleteOrderHandler : IDeleteOrderUseCase
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IProductRepository _productRepository;

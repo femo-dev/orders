@@ -1,5 +1,6 @@
 ﻿using Application.Common;
 using Application.DTOs;
+using Application.UseCases.Orders.Interfaces;
 using Domain.Interfaces;
 
 namespace Application.UseCases.Orders
@@ -7,7 +8,7 @@ namespace Application.UseCases.Orders
     /// <summary>
     /// Manejador del caso de uso de obtener una orden por ID.
     /// </summary>
-    public class GetOrderByIdHandler
+    public class GetOrderByIdHandler : IGetOrderByIdUseCase
     {
         private readonly IOrderRepository _orderRepository;
 

@@ -1,6 +1,7 @@
 ﻿using Application.Common;
 using Application.DTOs;
 using Application.Exceptions;
+using Application.UseCases.Products.Interfaces;
 using Domain.Entities;
 using Domain.Interfaces;
 
@@ -10,7 +11,7 @@ namespace Application.UseCases.Products
     /// Manejador del caso de uso de creación de producto.
     /// Orquesta la lógica de aplicación y coordina con el dominio.
     /// </summary>
-    public class CreateProductHandler
+    public class CreateProductHandler : ICreateProductUseCase
     {
         private readonly IProductRepository _productRepository;
 

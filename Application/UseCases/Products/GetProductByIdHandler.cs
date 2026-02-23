@@ -1,15 +1,14 @@
 ﻿using Application.Common;
 using Application.DTOs;
+using Application.UseCases.Products.Interfaces;
 using Domain.Interfaces;
 
 namespace Application.UseCases.Products
 {
-
-
     /// <summary>
     /// Manejador del caso de uso de obtener un producto por ID.
     /// </summary>
-    public class GetProductByIdHandler
+    public class GetProductByIdHandler : IGetProductByIdUseCase
     {
         private readonly IProductRepository _productRepository;
 

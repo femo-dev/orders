@@ -1,4 +1,5 @@
 ﻿using Application.Common;
+using Application.UseCases.Products.Interfaces;
 using Domain.Interfaces;
 
 namespace Application.UseCases.Products
@@ -6,7 +7,7 @@ namespace Application.UseCases.Products
     /// <summary>
     /// Manejador del caso de uso de eliminar un producto.
     /// </summary>
-    public class DeleteProductHandler
+    public class DeleteProductHandler : IDeleteProductUseCase
     {
         private readonly IProductRepository _productRepository;
 

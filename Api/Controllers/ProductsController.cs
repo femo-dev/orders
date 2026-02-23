@@ -2,6 +2,7 @@ namespace WebApi.Controllers;
 
 using Application.DTOs;
 using Application.UseCases.Products;
+using Application.UseCases.Products.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 /// <summary>
@@ -13,26 +14,26 @@ using Microsoft.AspNetCore.Mvc;
 [Produces("application/json")]
 public class ProductsController : ControllerBase
 {
-    private readonly CreateProductHandler _createProductHandler;
-    private readonly UpdateProductHandler _updateProductHandler;
-    private readonly GetProductsHandler _getProductsHandler;
-    private readonly GetProductByIdHandler _getProductByIdHandler;
-    private readonly DeleteProductHandler _deleteProductHandler;
+    private readonly ICreateProductUseCase _createProductUseCase;
+    private readonly IUpdateProductUseCase _updateProductUseCase;
+    private readonly IGetProductsUseCase _getProductsUseCase;
+    private readonly IGetProductByIdUseCase _getProductByIdUseCase;
+    private readonly IDeleteProductUseCase _deleteProductUseCase;
     private readonly ILogger<ProductsController> _logger;
 
     public ProductsController(
-        CreateProductHandler createProductHandler,
-        UpdateProductHandler updateProductHandler,
-        GetProductsHandler getProductsHandler,
-        GetProductByIdHandler getProductByIdHandler,
-        DeleteProductHandler deleteProductHandler,
+        ICreateProductUseCase createProductUseCase,
+        IUpdateProductUseCase updateProductUseCase,
+        IGetProductsUseCase getProductsUseCase,
+        IGetProductByIdUseCase getProductByIdUseCase,
+        IDeleteProductUseCase deleteProductUseCase,
         ILogger<ProductsController> logger)
     {
-        _createProductHandler = createProductHandler;
-        _updateProductHandler = updateProductHandler;
-        _getProductsHandler = getProductsHandler;
-        _getProductByIdHandler = getProductByIdHandler;
-        _deleteProductHandler = deleteProductHandler;
+        _createProductUseCase = createProductUseCase;
+        _updateProductUseCase = updateProductUseCase;
+        _getProductsUseCase = getProductsUseCase;
+        _getProductByIdUseCase = getProductByIdUseCase;
+        _deleteProductUseCase = deleteProductUseCase;
         _logger = logger;
     }
 
@@ -56,7 +57,7 @@ public class ProductsController : ControllerBase
             pageNumber, pageSize, nameFilter);
 
         var command = new GetProductsCommand(pageNumber, pageSize, nameFilter);
-        var result = await _getProductsHandler.HandleAsync(command, cancellationToken);
+        var result = await _getProductsUseCase.HandleAsync(command, cancellationToken);
 
         return Ok(result);
     }
@@ -77,7 +78,7 @@ public class ProductsController : ControllerBase
         _logger.LogInformation("Obteniendo producto con ID: {ProductId}", id);
 
         var command = new GetProductByIdCommand(id);
-        var result = await _getProductByIdHandler.HandleAsync(command, cancellationToken);
+        var result = await _getProductByIdUseCase.HandleAsync(command, cancellationToken);
 
         return Ok(result);
     }
@@ -98,7 +99,7 @@ public class ProductsController : ControllerBase
         _logger.LogInformation("Creando nuevo producto: {ProductName}", request.Name);
 
         var command = new CreateProductCommand(request.Name, request.Price, request.Stock);
-        var result = await _createProductHandler.HandleAsync(command, cancellationToken);
+        var result = await _createProductUseCase.HandleAsync(command, cancellationToken);
 
         return CreatedAtAction(nameof(GetProductById), new { id = result.Id }, result);
     }
@@ -122,7 +123,7 @@ public class ProductsController : ControllerBase
         _logger.LogInformation("Actualizando producto con ID: {ProductId}", id);
 
         var command = new UpdateProductCommand(id, request.Name, request.Price);
-        var result = await _updateProductHandler.HandleAsync(command, cancellationToken);
+        var result = await _updateProductUseCase.HandleAsync(command, cancellationToken);
 
         return Ok(result);
     }
@@ -143,7 +144,7 @@ public class ProductsController : ControllerBase
         _logger.LogInformation("Eliminando producto con ID: {ProductId}", id);
 
         var command = new DeleteProductCommand(id);
-        await _deleteProductHandler.HandleAsync(command, cancellationToken);
+        await _deleteProductUseCase.HandleAsync(command, cancellationToken);
 
         return NoContent();
     }

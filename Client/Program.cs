@@ -1,8 +1,11 @@
-﻿using Client;
+﻿using System.Text;
+using Client;
 
+Console.OutputEncoding = Encoding.UTF8;
+Console.InputEncoding = Encoding.UTF8;
 Console.WriteLine("🚀 Cliente de Sistema Productos y Órdenes\n");
 
-var client = new ApiClient("http://localhost:5267"); //7266
+var client = new ApiClient("https://localhost:7266"); //5267
 
 // ==================== MENÚ INTERACTIVO ====================
 

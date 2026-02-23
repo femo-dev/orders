@@ -1,15 +1,13 @@
 ﻿using Application.DTOs;
+using Application.UseCases.Orders.Interfaces;
 using Domain.Interfaces;
 
 namespace Application.UseCases.Orders
 {
-
-
-
     /// <summary>
     /// Manejador del caso de uso de obtener órdenes.
     /// </summary>
-    public class GetOrdersHandler
+    public class GetOrdersHandler : IGetOrdersUseCase
     {
         private readonly IOrderRepository _orderRepository;
 

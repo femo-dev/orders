@@ -1,14 +1,12 @@
 ﻿using Application.Common;
 using Application.DTOs;
+using Application.UseCases.Orders.Interfaces;
 using Domain.Entities;
 using Domain.Exceptions;
 using Domain.Interfaces;
 
 namespace Application.UseCases.Orders
 {
-
-
-
     /// <summary>
     /// Manejador del caso de uso de creación de orden.
     /// Orquesta la lógica de aplicación, dominio e infraestructura.
@@ -18,7 +16,7 @@ namespace Application.UseCases.Orders
     /// 2. Debe haber stock suficiente
     /// 3. El precio se congela en el momento de la orden
     /// </summary>
-    public class CreateOrderHandler
+    public class CreateOrderHandler : ICreateOrderUseCase
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IProductRepository _productRepository;

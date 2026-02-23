@@ -2,6 +2,7 @@
 
 using Application.DTOs;
 using Application.UseCases.Orders;
+using Application.UseCases.Orders.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 /// <summary>
@@ -13,23 +14,23 @@ using Microsoft.AspNetCore.Mvc;
 [Produces("application/json")]
 public class OrdersController : ControllerBase
 {
-    private readonly CreateOrderHandler _createOrderHandler;
-    private readonly GetOrdersHandler _getOrdersHandler;
-    private readonly GetOrderByIdHandler _getOrderByIdHandler;
-    private readonly DeleteOrderHandler _deleteOrderHandler;
+    private readonly ICreateOrderUseCase _createOrderUseCase;
+    private readonly IGetOrdersUseCase _getOrdersUseCase;
+    private readonly IGetOrderByIdUseCase _getOrderByIdUseCase;
+    private readonly IDeleteOrderUseCase _deleteOrderUseCase;
     private readonly ILogger<OrdersController> _logger;
 
     public OrdersController(
-        CreateOrderHandler createOrderHandler,
-        GetOrdersHandler getOrdersHandler,
-        GetOrderByIdHandler getOrderByIdHandler,
-        DeleteOrderHandler deleteOrderHandler,
+        ICreateOrderUseCase createOrderUseCase,
+        IGetOrdersUseCase getOrdersUseCase,
+        IGetOrderByIdUseCase getOrderByIdUseCase,
+        IDeleteOrderUseCase deleteOrderUseCase,
         ILogger<OrdersController> logger)
     {
-        _createOrderHandler = createOrderHandler;
-        _getOrdersHandler = getOrdersHandler;
-        _getOrderByIdHandler = getOrderByIdHandler;
-        _deleteOrderHandler = deleteOrderHandler;
+        _createOrderUseCase = createOrderUseCase;
+        _getOrdersUseCase = getOrdersUseCase;
+        _getOrderByIdUseCase = getOrderByIdUseCase;
+        _deleteOrderUseCase = deleteOrderUseCase;
         _logger = logger;
     }
 
@@ -51,7 +52,7 @@ public class OrdersController : ControllerBase
             pageNumber, pageSize);
 
         var command = new GetOrdersCommand(pageNumber, pageSize);
-        var result = await _getOrdersHandler.HandleAsync(command, cancellationToken);
+        var result = await _getOrdersUseCase.HandleAsync(command, cancellationToken);
 
         return Ok(result);
     }
@@ -72,7 +73,7 @@ public class OrdersController : ControllerBase
         _logger.LogInformation("Obteniendo orden con ID: {OrderId}", id);
 
         var command = new GetOrderByIdCommand(id);
-        var result = await _getOrderByIdHandler.HandleAsync(command, cancellationToken);
+        var result = await _getOrderByIdUseCase.HandleAsync(command, cancellationToken);
 
         return Ok(result);
     }
@@ -105,7 +106,7 @@ public class OrdersController : ControllerBase
             .ToList();
 
         var command = new CreateOrderCommand(request.CustomerName, items);
-        var result = await _createOrderHandler.HandleAsync(command, cancellationToken);
+        var result = await _createOrderUseCase.HandleAsync(command, cancellationToken);
 
         return CreatedAtAction(nameof(GetOrderById), new { id = result.Id }, result);
     }
@@ -131,7 +132,7 @@ public class OrdersController : ControllerBase
         _logger.LogInformation("Eliminando orden con ID: {OrderId}", id);
 
         var command = new DeleteOrderCommand(id);
-        await _deleteOrderHandler.HandleAsync(command, cancellationToken);
+        await _deleteOrderUseCase.HandleAsync(command, cancellationToken);
 
         return NoContent();
     }
