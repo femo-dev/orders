@@ -1,5 +1,7 @@
 ﻿using Orders.Application.UseCases.Orders;
+using Orders.Application.UseCases.Orders.Interfaces;
 using Orders.Application.UseCases.Products;
+using Orders.Application.UseCases.Products.Interfaces;
 
 namespace Orders.Api.Extensions
 {
@@ -14,17 +16,17 @@ namespace Orders.Api.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             // Handlers de Productos
-            services.AddScoped<CreateProductHandler>();
-            services.AddScoped<UpdateProductHandler>();
-            services.AddScoped<GetProductsHandler>();
-            services.AddScoped<GetProductByIdHandler>();
-            services.AddScoped<DeleteProductHandler>();
+            services.AddScoped<ICreateProductUseCase, CreateProductHandler>();
+            services.AddScoped<IUpdateProductUseCase, UpdateProductHandler>();
+            services.AddScoped<IGetProductsUseCase, GetProductsHandler>();
+            services.AddScoped<IGetProductByIdUseCase, GetProductByIdHandler>();
+            services.AddScoped<IDeleteProductUseCase, DeleteProductHandler>();
 
             // Handlers de Órdenes
-            services.AddScoped<CreateOrderHandler>();
-            services.AddScoped<GetOrdersHandler>();
-            services.AddScoped<GetOrderByIdHandler>();
-            services.AddScoped<DeleteOrderHandler>();
+            services.AddScoped<ICreateOrderUseCase, CreateOrderHandler>();
+            services.AddScoped<IGetOrdersUseCase, GetOrdersHandler>();
+            services.AddScoped<IGetOrderByIdUseCase, GetOrderByIdHandler>();
+            services.AddScoped<IDeleteOrderUseCase, DeleteOrderHandler>();
 
             return services;
         }
