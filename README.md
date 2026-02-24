@@ -9,7 +9,7 @@ Sistema integral de gestión de **Productos y Órdenes** desarrollado con **.NET
 La solución implementa **Clean Architecture + DDD** organizada en **6 proyectos** con separación clara de responsabilidades:
 
 ```
-┌─────────────────────────────────────────────────────────���
+┌─────────────────────────────────────────────────────────┐
 │                 API (Presentación)                      │
 │  - Controllers REST                                     │
 │  - Middleware Global                                    │
