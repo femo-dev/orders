@@ -6,7 +6,7 @@ Sistema integral de gestión de **Productos y Órdenes** desarrollado con **.NET
 
 ## 🏗️ Arquitectura
 
-La solución implementa **Clean Architecture + DDD** organisada en **6 proyectos** con separación clara de responsabilidades:
+La solución implementa **Clean Architecture + DDD** organizada en **6 proyectos** con separación clara de responsabilidades:
 
 ```
 ┌─────────────────────────────────────────────────────────���
