@@ -1,4 +1,4 @@
-﻿using Orders.Application.Common;
+﻿using Orders.Application.Exceptions;
 using Orders.Application.UseCases.Orders.Interfaces;
 using Orders.Domain.Interfaces;
 
@@ -59,13 +59,13 @@ namespace Orders.Application.UseCases.Orders
                 await _productRepository.SaveChangesAsync(cancellationToken);
                 await _orderRepository.SaveChangesAsync(cancellationToken);
             }
-            catch (Common.ApplicationException)
+            catch (Exceptions.ApplicationException)
             {
                 throw;
             }
             catch (Exception ex)
             {
-                throw new Common.ApplicationException($"Error al eliminar la orden: {ex.Message}", ex);
+                throw new Exceptions.ApplicationException($"Error al eliminar la orden: {ex.Message}", ex);
             }
         }
     }

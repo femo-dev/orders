@@ -1,5 +1,5 @@
-﻿using Orders.Application.Common;
-using Orders.Application.DTOs;
+﻿using Orders.Application.DTOs;
+using Orders.Application.Exceptions;
 using Orders.Application.UseCases.Products.Interfaces;
 using Orders.Domain.Interfaces;
 

@@ -1,8 +1,8 @@
-﻿using Orders.Application.Common;
+﻿using Orders.Application.Exceptions;
 using Orders.Application.DTOs;
-using Orders.Application.Exceptions;
 using Orders.Application.UseCases.Products.Interfaces;
 using Orders.Domain.Entities;
+using Orders.Domain.Exceptions;
 using Orders.Domain.Interfaces;
 
 namespace Orders.Application.UseCases.Products

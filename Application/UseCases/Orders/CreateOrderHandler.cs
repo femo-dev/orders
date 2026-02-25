@@ -1,4 +1,4 @@
-﻿using Orders.Application.Common;
+﻿using Orders.Application.Exceptions;
 using Orders.Application.DTOs;
 using Orders.Application.UseCases.Orders.Interfaces;
 using Orders.Domain.Entities;
@@ -87,13 +87,13 @@ namespace Orders.Application.UseCases.Orders
             {
                 throw new ValidationException(ex.Message);
             }
-            catch (Common.ApplicationException)
+            catch (Exceptions.ApplicationException)
             {
                 throw;
             }
             catch (Exception ex)
             {
-                throw new Common.ApplicationException($"Error al crear la orden: {ex.Message}", ex);
+                throw new Exceptions.ApplicationException($"Error al crear la orden: {ex.Message}", ex);
             }
         }
 

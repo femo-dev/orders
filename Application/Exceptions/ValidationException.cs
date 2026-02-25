@@ -1,6 +1,5 @@
-﻿namespace Orders.Application.Common
+﻿namespace Orders.Application.Exceptions
 {
-
     /// <summary>
     /// Excepción lanzada cuando hay errores de validación.
     /// </summary>

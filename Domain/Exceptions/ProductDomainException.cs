@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Orders.Domain.Exceptions
+﻿namespace Orders.Domain.Exceptions
 {
     /// <summary>
     /// Excepción lanzada cuando se viola una regla de negocio en el dominio de Productos.

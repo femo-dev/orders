@@ -121,10 +121,7 @@ Orders/
 │   │   ├── OrderItemResponse.cs
 │   │   └── GetOrdersResponse.cs
 │   │
-│   ├── Common/
-│   │   ├── Mappers/
-│   │   │   ├── ProductCommandMapper.cs
-│   │   │   └── OrderCommandMapper.cs
+│   ├── Exceptions/
 │   │   ├── ApplicationException.cs
 │   │   ├── NotFoundException.cs
 │   │   └── ValidationException.cs

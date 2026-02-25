@@ -1,4 +1,4 @@
-﻿using Orders.Application.Common;
+﻿using Orders.Application.Exceptions;
 
 namespace Orders.Api.Middleware
 {
@@ -50,7 +50,7 @@ namespace Orders.Api.Middleware
                     response.Message = validationEx.Message;
                     break;
 
-                case Application.Common.ApplicationException appEx:
+                case Application.Exceptions.ApplicationException appEx:
                     context.Response.StatusCode = StatusCodes.Status400BadRequest;
                     response.StatusCode = 400;
                     response.Message = appEx.Message;
